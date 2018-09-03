@@ -124,7 +124,8 @@ Date:   Fri Aug 31 15:40:18 2018 +0800
 6. 删除一个没有合并过的分支：
    - git branch -d  删除失败，会提示该分支还没有被合并，如果删除，将丢失修改，
    - 强行删除，需要使用大写的-D参数： **git branch -D **
-7. 多人协作：
+7. 删除Github上的分支 **git push origin :dev**
+8. 多人协作：
    - 本地新建的分支如果不推送到远程，对其他人就是不可见的。
    - 若本地仓库没有dev分支，远程仓库有dev的分支，则直接抓取。
      - **git checkout -b dev origin/dev**
@@ -137,7 +138,7 @@ Date:   Fri Aug 31 15:40:18 2018 +0800
      - 若git pull失败，提示：no tracking  information,则说明本地分支和远程分支的连接关系没有创建，用命令： **git branch --set-upstream-to dev origin/dev**,再**git pull**。
      - git pull成功，手动解决合并冲突。
      - 最后 **git push origin dev**
-8. rebase操作可以把本地未push的分叉提交历史整理成直线，rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。 **git rebase**
+9. rebase操作可以把本地未push的分叉提交历史整理成直线，rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。 **git rebase**
 
 ---
 
